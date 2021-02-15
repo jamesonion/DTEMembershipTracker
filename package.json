@@ -14,5 +14,6 @@
   },
   "dependencies": {
     "request": "^2.67.0"
+    "mocha": "3.4.2"
   }
 }
