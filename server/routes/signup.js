@@ -1,11 +1,11 @@
 // This file handles all of the routing for user signup functionality.
 
-const User = require('../models/User');
+import User, { find } from '../models/User.js';
 
-module.exports = (app) => {
+export default (app) => {
 
-  app.post('/api/account/signup', (req, res, next) => {
-    
+  app.post('/', (req, res, next) => {
+    console.log("in signup")
     // Get the email and password from the request body
     const { body } = req;
     const { password } = body;
@@ -28,7 +28,7 @@ module.exports = (app) => {
     email = email.trim();    
     
     // Verify that there is not already a user with the email address
-    User.find({
+    find({
       email: email
     }, (err, previousUsers) => {
       if (err) {
@@ -64,3 +64,4 @@ module.exports = (app) => {
 
     });
 };
+
