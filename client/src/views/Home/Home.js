@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import logo from '../../assets/logo.svg';
 import './Home.css';
 
-
+/*
 class Home extends Component {
     constructor(props) {
       super(props);
@@ -175,8 +176,9 @@ class Home extends Component {
   
   
   }
+*/
 
-/*function Home() {
+function Home() {
     return (
         <div className="App">
             <header className="App-header">
@@ -194,6 +196,6 @@ class Home extends Component {
             </header>
         </div>
     );
-}*/
+}
 
 export default Home;

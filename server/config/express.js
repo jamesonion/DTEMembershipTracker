@@ -2,8 +2,8 @@ const path = require('path'),
     express = require('express'),
     mongoose = require('mongoose'),
     morgan = require('morgan'),
-    bodyParser = require('body-parser'),
-    exampleRouter = require('../routes/examples.server.routes');
+    bodyParser = require('body-parser')
+    usersRouter = require("../routes/users");
 
 module.exports.init = () => {
     /* 
@@ -16,6 +16,11 @@ module.exports.init = () => {
     mongoose.set('useCreateIndex', true);
     mongoose.set('useFindAndModify', false);
 
+    const connection = mongoose.connection;
+    connection.once('open', () => {
+        console.log("MongoDB database connection established successfully!");
+    })
+
     // initialize app
     const app = express();
 
@@ -25,8 +30,8 @@ module.exports.init = () => {
     // body parsing middleware
     app.use(bodyParser.json());
 
-    // add a router
-    app.use('/api/example', exampleRouter);
+    // add routers
+    app.use('/users', usersRouter);
 
     if (process.env.NODE_ENV === 'production') {
         // Serve any static files
