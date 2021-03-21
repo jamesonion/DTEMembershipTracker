@@ -5,19 +5,20 @@
 }
 .navigation ul {
   display: flex;
-  justify-content: flex-start;
+
   align-items: center;
   list-style: none;
 }
-.navigation ul li a {
+.navigation ul li div a {
+  justify-content: flex-start;
   color: white;
   font-size: 15pt;
-
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   margin: 5px 15px;
   text-decoration: none;
 }
+
 
 .bgLayout {
   background-image: url("../img/background.png");
@@ -26,4 +27,17 @@
   width: 100%;
   height: 100%;
   position: fixed;
+}
+
+.inslogo {
+  /* justify-content: flex-end; */
+  width: 50px;
+  height: 40px;
+}
+
+.fblogo {
+  /* justify-content: flex-end; */
+  padding-bottom: 11px;
+  width: 80px;
+  height: 50px;
 }
