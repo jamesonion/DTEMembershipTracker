@@ -1,6 +1,6 @@
 import "../css/default.min.css";
 import transparentlogo from "../img/logoTransparent2.png";
-import Form from "./Form.js";
+import FormReg from "./FormReg.js";
 
 const Header = () => {
   return (
@@ -47,10 +47,10 @@ const Header = () => {
               paddingBottom: "10%",
             }}
           >
-            <Form />
+            <FormReg />
             {/* Replace this with working react-router and learn to center */}
             <div style={{ paddingBottom: "5%" }} />
-            <a href=""> Request An Account </a>
+            <a href=""> Already have an account? Log in </a>
           </div>
         </div>
       </div>

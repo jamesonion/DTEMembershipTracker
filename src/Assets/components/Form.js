@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import "../css/default.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 export class Form extends Component {
   constructor(props) {
@@ -22,10 +25,25 @@ export class Form extends Component {
     });
   };
 
+  handleSignIn = (event) => {
+    //will change this to console.log when error is fixed
+    alert("email:" + this.state.email + " password: " + this.state.password);
+  };
+
   render() {
     return (
-      <form>
-        <label> E-mail </label>
+      <form onSubmit={this.handleSignIn}>
+        <label
+          style={{
+            fontFamily: "verdana",
+            fontWeight: "italic",
+            color: "#990000",
+            fontSize: "1rem",
+          }}
+        >
+          {" "}
+          Email{" "}
+        </label>
         <div style={{ paddingBottom: "1%" }} />
         <div>
           <input
@@ -33,13 +51,23 @@ export class Form extends Component {
             placeholder="example@gmail.com"
             value={this.state.email}
             onChange={this.handleEmail}
-            style={{ borderRadius: 6 }}
+            className="text-field"
           />
         </div>
 
         <div style={{ paddingBottom: "5%" }} />
 
-        <label> Password </label>
+        <label
+          style={{
+            fontFamily: "verdana",
+            fontWeight: "italic",
+            color: "#990000",
+            fontSize: "1rem",
+          }}
+        >
+          {" "}
+          Password{" "}
+        </label>
         <div style={{ paddingBottom: "1%" }} />
         <div>
           <input
@@ -47,9 +75,15 @@ export class Form extends Component {
             placeholder="password"
             value={this.state.password}
             onChange={this.handlePassword}
-            style={{ borderRadius: 6 }}
+            className="text-field"
           />
         </div>
+
+        <div style={{ paddingBottom: "10%" }} />
+        <button className="signIn" type="submit">
+          {" "}
+          Sign In{" "}
+        </button>
       </form>
     );
   }
