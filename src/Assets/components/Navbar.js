@@ -7,11 +7,20 @@ class Navbar extends Component {
     return (
       <Router>
         <nav className="navigation">
-      
+          <ul>
             <li>
-              <Link to={"/Mainpage"}>Not a member? Sign in</Link>
+              <a href="/Mainpage">Not a member? Visit the DTE website.</a>
             </li>
-          
+
+            <li>
+              <a href="https://www.instagram.com/ufdreamteam/?hl=en">
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/UFDreamTeam/">Facebook</a>
+            </li>
+          </ul>
         </nav>
       </Router>
     );
