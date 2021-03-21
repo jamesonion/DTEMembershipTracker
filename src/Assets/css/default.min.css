@@ -1,5 +1,21 @@
 .navigation {
   height: 60px;
   background-color: maroon;
-  
+}
+.bgLayout {
+  background-image: url("../img/background.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -9999999;
+}
+.text-form {
+  align-self: left;
+  padding-left: 15%;
+  padding-right: 15%;
+  font: "verdana";
+  font-size: 1.5rem;
+  font-weight: bold;
 }
