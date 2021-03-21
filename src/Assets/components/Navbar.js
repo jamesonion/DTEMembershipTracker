@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "../css/default.min.css";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link, Route, BrowserRouter as Router } from "react-router-dom";
 import iglogo from "../img/iglogo.png";
 import fblogo from "../img/fblogo.png";
+import home from './Mainpage'
+
 
 class Navbar extends Component {
   render() {
@@ -11,9 +13,8 @@ class Navbar extends Component {
         <nav className="navigation">
           <ul>
             <li>
-              <div>
-                <a href="/Mainpage">Not a member? Create an Account now!</a>
-              </ div>
+              <Link to="/Mainpage">Not a member? Create an Account now!</Link>
+              
             </li>
             <li>
               <a href="https://www.facebook.com/UFDreamTeam/">
@@ -26,10 +27,10 @@ class Navbar extends Component {
               </a>
             </li>
           </ul>
+          <Route path="/Mainpage" component={home} />
         </nav>
       </Router>
     );
   }
 }
-
 export default Navbar;

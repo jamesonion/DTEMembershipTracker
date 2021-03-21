@@ -9,7 +9,7 @@
   align-items: center;
   list-style: none;
 }
-.navigation ul li div a {
+.navigation ul li a {
   justify-content: flex-start;
   color: white;
   font-size: 15pt;
