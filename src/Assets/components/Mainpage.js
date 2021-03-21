@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-import "./Assets/css/default.min.css";
-import bgimg from "./Assets/img/background.png";
+import "../css/default.min.css";
 
-class homepage extends Component {
-  render() {
-    return (
-      <div><h1>MAIN PAGE</h1></div>
-    );
-  }
-}
+const homepage = () => {
+  return(
+  <div>
+    <h1>HOME</h1>
+  </div>
+  )
+};
 
 export default homepage;
