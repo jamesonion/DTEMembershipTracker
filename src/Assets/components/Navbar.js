@@ -3,27 +3,37 @@ import "../css/default.min.css";
 import { Link, Route, BrowserRouter as Router } from "react-router-dom";
 import iglogo from "../img/iglogo.png";
 import fblogo from "../img/fblogo.png";
-import home from './Mainpage'
-
+import home from "./Mainpage";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faInstagram,
+  faFacebookSquare,
+} from "@fortawesome/free-brands-svg-icons";
 
 class Navbar extends Component {
   render() {
     return (
       <Router>
         <nav className="navigation">
-          <ul>
+          <ul style={{ width: "23%" }}>
             <li>
               <Link to="/Mainpage">Not a member? Create an Account now!</Link>
-              
             </li>
+          </ul>
+          <ul
+            style={{
+              float: "float",
+              width: "73%",
+            }}
+          >
             <li>
               <a href="https://www.facebook.com/UFDreamTeam/">
-                <img className="fblogo" src={fblogo} />
+                <FontAwesomeIcon icon={faFacebookSquare} className="social" />
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/ufdreamteam/?hl=en">
-                <img className="inslogo" src={iglogo} />
+                <FontAwesomeIcon icon={faInstagram} className="social" />
               </a>
             </li>
           </ul>

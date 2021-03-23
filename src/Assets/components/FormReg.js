@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "../css/default.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 export class Form extends Component {
   constructor(props) {
@@ -73,7 +71,6 @@ export class Form extends Component {
 
           <div style={{ width: "45%", paddingLeft: "2%" }}>
             <label className="text-form">Last Name</label>
-
             <div style={{ paddingBottom: "1%" }} />
             <div>
               <input

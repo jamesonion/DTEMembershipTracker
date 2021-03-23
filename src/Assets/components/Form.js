@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "../css/default.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 export class Form extends Component {
   constructor(props) {
