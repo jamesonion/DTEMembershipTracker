@@ -1,23 +1,16 @@
 import React, { Component } from "react";
 import "./Assets/css/default.min.css";
+// import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./Assets/components/Navbar.js";
-import bgimg from "./Assets/img/background.png";
+import SignIn from "./Assets/components/SignIn";
+import Register from "./Assets/components/Register";
 
 class App extends Component {
   render() {
     return (
       <div>
         <Navbar />
-        <div
-          style={{
-            backgroundImage: `url(${bgimg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            width: "100%",
-            height: "100%",
-            position: "fixed",
-          }}
-        ></div>
+        <Register />
       </div>
     );
   }
