@@ -29,12 +29,10 @@
   z-index: -9999999;
 }
 .text-form {
-  align-self: left;
-  padding-left: 15%;
-  padding-right: 15%;
-  font: "verdana";
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
+  color: maroon;
 }
 .signIn {
   width: 92%;
@@ -52,6 +50,7 @@
   border-width: 0.25rem;
   border-radius: 0.5rem;
   background-color: #f7f7f7;
+  height: 2rem;
 }
 
 .inslogo {

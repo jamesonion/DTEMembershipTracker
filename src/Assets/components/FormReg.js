@@ -58,16 +58,7 @@ export class Form extends Component {
       <form onSubmit={this.handleSubmit}>
         <div style={{ display: "flex" }}>
           <div style={{ width: "45%", paddingRight: "2%" }}>
-            <label
-              style={{
-                fontFamily: "verdana",
-                fontWeight: "italic",
-                color: "#990000",
-                fontSize: "1rem",
-              }}
-            >
-              First Name
-            </label>
+            <label className="text-form">First Name</label>
             <div style={{ paddingBottom: "1%" }} />
             <div>
               <input
@@ -81,16 +72,8 @@ export class Form extends Component {
           </div>
 
           <div style={{ width: "45%", paddingLeft: "2%" }}>
-            <label
-              style={{
-                fontFamily: "verdana",
-                fontWeight: "italic",
-                color: "#990000",
-                fontSize: "1rem",
-              }}
-            >
-              Last Name
-            </label>
+            <label className="text-form">Last Name</label>
+
             <div style={{ paddingBottom: "1%" }} />
             <div>
               <input
@@ -105,17 +88,7 @@ export class Form extends Component {
           </div>
         </div>
 
-        <label
-          style={{
-            fontFamily: "verdana",
-            fontWeight: "italic",
-            color: "#990000",
-            fontSize: "1rem",
-          }}
-        >
-          {" "}
-          Email{" "}
-        </label>
+        <label className="text-form"> Email </label>
         <div style={{ paddingBottom: "1%" }} />
         <div>
           <input
@@ -129,17 +102,8 @@ export class Form extends Component {
 
         <div style={{ paddingBottom: "5%" }} />
 
-        <label
-          style={{
-            fontFamily: "verdana",
-            fontWeight: "italic",
-            color: "#990000",
-            fontSize: "1rem",
-          }}
-        >
-          {" "}
-          Password{" "}
-        </label>
+        <label className="text-form">Password</label>
+
         <div style={{ paddingBottom: "1%" }} />
         <div>
           <input

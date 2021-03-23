@@ -33,17 +33,7 @@ export class Form extends Component {
   render() {
     return (
       <form onSubmit={this.handleSignIn}>
-        <label
-          style={{
-            fontFamily: "verdana",
-            fontWeight: "italic",
-            color: "#990000",
-            fontSize: "1rem",
-          }}
-        >
-          {" "}
-          Email{" "}
-        </label>
+        <label className="text-form">Email</label>
         <div style={{ paddingBottom: "1%" }} />
         <div>
           <input
@@ -57,17 +47,8 @@ export class Form extends Component {
 
         <div style={{ paddingBottom: "5%" }} />
 
-        <label
-          style={{
-            fontFamily: "verdana",
-            fontWeight: "italic",
-            color: "#990000",
-            fontSize: "1rem",
-          }}
-        >
-          {" "}
-          Password{" "}
-        </label>
+        <label className="text-form">Password</label>
+
         <div style={{ paddingBottom: "1%" }} />
         <div>
           <input
