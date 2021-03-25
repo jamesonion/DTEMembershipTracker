@@ -51,7 +51,7 @@ const Header = () => {
               <Form />
               {/* Replace this with working react-router and learn to center */}
               <div style={{ paddingBottom: "5%" }} />
-              <a href=""> Request An Account </a>
+              <a href=""> Don't have an account? Sign up. </a>
             </div>
           </div>
         </div>
