@@ -4,6 +4,7 @@ const path = require('path'),
     morgan = require('morgan'),
     bodyParser = require('body-parser')
     usersRouter = require("../routes/users");
+    cors = require("cors")
 
 module.exports.init = () => {
     /* 
@@ -31,6 +32,7 @@ module.exports.init = () => {
     app.use(bodyParser.json());
 
     // add routers
+    app.use(cors())
     app.use('/users', usersRouter);
 
     if (process.env.NODE_ENV === 'production') {

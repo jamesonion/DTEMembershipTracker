@@ -10,7 +10,7 @@ let User = require("../models/user.model")
 */
 
 // Route: Retrieve all users
-// "POST http://localhost:5000/users/"
+// "GET http://localhost:5000/users/"
 router.route('/').get((req, res) => {
     User.find()
       .then(users => res.json(users))
@@ -37,7 +37,7 @@ router.route('/add').post((req, res) => {
         points: req.body.points
     });
   
-    // Hash the password
+    // Hash the password TODO
     bcrypt.genSalt(10, (err, salt) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;
@@ -48,7 +48,7 @@ router.route('/add').post((req, res) => {
         .then(() => res.json('User added!'))
         .catch(err => res.status(400).json('Error: ' + err));
         });
-    });
+   });
 });
 
 // Route: Get a user by id
