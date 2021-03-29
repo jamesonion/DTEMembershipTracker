@@ -38,18 +38,18 @@ router.route('/add').post((req, res) => {
     });
   
     // Hash the password TODO
-    bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(newUser.password, salt, (err, hash) => {
-          if (err) throw err;
-          newUser.password = hash;
+    // bcrypt.genSalt(10, (err, salt) => {
+    //     bcrypt.hash(newUser.password, salt, (err, hash) => {
+    //       if (err) throw err;
+    //       newUser.password = hash;
 
     // Save user to database
         newUser.save()
         .then(() => res.json('User added!'))
         .catch(err => res.status(400).json('Error: ' + err));
         });
-   });
-});
+  // });
+//});
 
 // Route: Get a user by id
 // "GET http://localhost:5000/users/<id>" 

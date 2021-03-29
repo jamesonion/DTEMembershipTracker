@@ -24,12 +24,13 @@
 
 .bgLayout {
   background-image: url("./assets/img/background.png");
-  background-size: cover;
+  background-size: 1920px 1080px;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: -9999999;
+  
 }
 .text-form {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

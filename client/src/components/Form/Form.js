@@ -48,11 +48,11 @@ export default class Form extends Component {
 
       e.preventDefault();
 
-      const user = this.state.users.find(user => this.state.email === user.email)
+      const user = this.state.users.find(user => this.state.email === user.email && this.state.password === user.password)
       if(user != undefined)
         alert('Logged In!')
       else
-        alert('Incorrect User')
+        alert('Invalid Email or Password.')
       
       
 

@@ -59,9 +59,11 @@ export default class FormReg extends Component {
     axios.post('http://localhost:5000/users/add', user) // TODO: When deploying need to make this the web address. Can set the address via environment variables.
     .then(function (response) {
     console.log(response);
+    alert("Account Created!")
     })
     .catch(function (error) {
     console.log(error);
+    alert(error);
     });
 
   }

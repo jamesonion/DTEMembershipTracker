@@ -17,7 +17,7 @@ class Navbar extends Component {
         <nav className="navigation">
           <ul style={{ width: "23%" }}>
             <li>
-              <Link to="/Mainpage">Not a member? Create an Account now!</Link>
+              <a href="https://www.ufdreamteam.org/dream-team-engineering">Not a member? Visit the DTE website.</a>
             </li>
           </ul>
           <ul

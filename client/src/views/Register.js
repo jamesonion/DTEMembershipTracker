@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import "../default.min.css";
 import transparentlogo from "../assets/img/logoTransparent2.png";
 import FormReg from "../components/Form/FormReg.js";
+import { Link, Route, BrowserRouter as Router } from "react-router-dom";
+import signin from "./SignIn"
 
-const Header = () => {
-  return (
-    <header>
-      <div className="bgLayout"></div>
-
+class Register extends Component {
+  render() {
+    return (
       <div
         className="form"
         style={{
@@ -23,7 +23,7 @@ const Header = () => {
           style={{
             // backgroundColor: "white",
             // opacity: "65%",
-            backgroundColor: "#FFFFFF85",
+            backgroundColor: "#FFFFFF99",
             // width: "150%",
             padding: "5%",
 
@@ -50,13 +50,28 @@ const Header = () => {
           >
             <FormReg />
             {/* Replace this with working react-router and learn to center */}
-            <div style={{ paddingBottom: "5%" }} />
-            <a href=""> Already have an account? Log in </a>
+            <Router>
+              <br></br>
+              <div>
+                <Link
+                  to="/SignIn"
+                  style={{
+                    color: "maroon",
+                    fontFamily: "sans-serif",
+                    fontWeight: "bold",
+                    textDecorationLine: "none",
+                    // paddingTop: '10px'
+                  }}
+                >
+                  Already have an account? Log in.
+                </Link>
+              </div>
+            </Router>
           </div>
         </div>
       </div>
-    </header>
-  );
-};
+    );
+  }
+}
 
-export default Header;
+export default Register;
