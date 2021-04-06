@@ -18,39 +18,47 @@ function Usernavigationbar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <ul className="userLinks">
-            <li>
-              <img
-                src={transparentlogo}
-                style={{ height: "100%", width: "100%" }}
-              />
-            </li>
-            {/* Style these links */}
-            <li>
-              <Link
-                to="/Points"
-                onClick={() => (window.location.href = "/Points")}
-              >
-                Points
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Events"
-                onClick={() => (window.location.href = "/Events")}
-              >
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/Submit"
-                onClick={() => (window.location.href = "/Submit")}
-              >
-                Submit
-              </Link>
-            </li>
-          </ul>
+          <img
+            className="userNavImage"
+            src={transparentlogo}
+            className="userNavImage"
+          />
+          <Link
+            to="/Events"
+            className="userNavLinks"
+            style={{
+              color: "white",
+            }}
+            onClick={() => (window.location.href = "/Events")}
+          >
+            Events
+          </Link>
+          <Link
+            to="/Points"
+            className="userNavLinks"
+            style={{
+              color: "white",
+            }}
+            onClick={() => (window.location.href = "/Points")}
+          >
+            Points
+          </Link>
+          <Link
+            to="/Submit"
+            className="userNavLinks"
+            style={{ color: "white" }}
+            onClick={() => (window.location.href = "/Submit")}
+          >
+            Submit
+          </Link>
+          <Link
+            to="/SignIn"
+            className="userNavLinks"
+            style={{ color: "white" }}
+            onClick={() => (window.location.href = "/SignIn")}
+          >
+            Logout
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

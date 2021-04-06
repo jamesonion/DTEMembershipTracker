@@ -35,7 +35,7 @@ class App extends Component {
       <Router>
         <div>
           <div className="bgLayout">
-            {/* <Usernavigationbar /> */}
+            <Usernavigationbar />
             <Switch>
               <Route path="/" exact component={Register}></Route>
               <Route path="/Register" exact component={Register}></Route>

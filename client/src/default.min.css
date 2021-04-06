@@ -125,8 +125,20 @@ img {
   border-radius: 15;
 }
 
-.userLinks {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+/* Testing for User Navbar */
+.userNavLinks {
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 2.5rem;
+  padding-top: 3rem;
+  /* text-decoration: none;
+  text-decoration-color: white;
+  text-align: center;
+  textalignvertical: "center"; */
+}
+.userNavImage {
+  object-fit: contain;
+  padding-top: 1rem;
+  max-height: 100px;
 }
