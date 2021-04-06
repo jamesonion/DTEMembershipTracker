@@ -3,10 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faFacebookSquare,
-  faArrowLeft,
-  faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
-
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import {
   Navbar,
   Nav,
@@ -28,9 +26,12 @@ function Navigationbar() {
         <Nav className="mr-auto">
           <Nav.Link
             href="https://www.ufdreamteam.org/"
-            style={{ color: "white", fontSize:"16px"}} //{/* need to change font */}
+            style={{ color: "white", fontSize: "16px" }} //{/* need to change font */}
           >
-            Not a Member? View the DTE website
+            <div>
+              <FontAwesomeIcon icon={faArrowLeft} /> <span> </span>
+              Not a Member? View the DTE website
+            </div>
           </Nav.Link>
         </Nav>
 

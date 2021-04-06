@@ -21,10 +21,10 @@
 
 // export default App;
 
-
 import React, { Component } from "react";
 import "./default.min.css";
 import Navigationbar from "./components/Navbar/Navbar.js";
+import Usernavigationbar from "./components/Navbar/UserNavbar.js";
 import SignIn from "./views/SignIn.js";
 import Register from "./views/Register.js";
 import { Switch, Link, Route, BrowserRouter as Router } from "react-router-dom";
@@ -35,7 +35,7 @@ class App extends Component {
       <Router>
         <div>
           <div className="bgLayout">
-            <Navigationbar />
+            {/* <Usernavigationbar /> */}
             <Switch>
               <Route path="/" exact component={Register}></Route>
               <Route path="/Register" exact component={Register}></Route>
