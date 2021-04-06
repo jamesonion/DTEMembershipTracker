@@ -18,11 +18,16 @@ function Usernavigationbar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <img
-            className="userNavImage"
-            src={transparentlogo}
-            className="userNavImage"
-          />
+          <Link
+            to="/Register"
+            onClick={() => (window.location.href = "/Register")}
+          >
+            <img
+              className="userNavImage"
+              src={transparentlogo}
+              className="userNavImage"
+            />
+          </Link>
           <Link
             to="/Events"
             className="userNavLinks"
