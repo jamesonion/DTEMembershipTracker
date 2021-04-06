@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faFacebookSquare,
+  faArrowLeft,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 
