@@ -1,25 +1,6 @@
-.navigation {
-  background-color: maroon;
-  display: inline-flex;
-  width: 100vw;
-  height: 3vw;
-}
-.navigation ul {
-  display: flex;
-  align-items: flex-start;
-  list-style: none;
-  justify-content: flex-end;
-}
-.navigation ul li a {
-  color: white;
-  font-size: 1.5rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
-  margin: 5px 15px;
-  text-decoration: none;
-}
-.navigation ul li :hover {
-  color: #ddd;
+.nav-bk {
+  background: #800000;
+  height: 2cm;
 }
 
 .bgLayout {
@@ -69,6 +50,11 @@
   height: 50px;
 }
 .social {
-  min-width: 2rem;
-  min-height: 2rem;
+  min-width: 3rem;
+  min-height: 2.2rem;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 40px;
 }
+

@@ -1,46 +1,47 @@
 import React, { Component } from "react";
-import "../../default.min.css";
-import { Link, Route, BrowserRouter as Router } from "react-router-dom";
-//import iglogo from "../img/iglogo.png";
-//import fblogo from "../img/fblogo.png";
-import home from "../../views/Mainpage.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faFacebookSquare,
+  faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 
-class Navbar extends Component {
-  render() {
-    return (
-      <Router>
-        <nav className="navigation">
-          <ul style={{ width: "23%" }}>
-            <li>
-              <a href="https://www.ufdreamteam.org/dream-team-engineering">Not a member? Visit the DTE website.</a>
-            </li>
-          </ul>
-          <ul
-            style={{
-              float: "float",
-              width: "73%",
-            }}
+import {
+  Navbar,
+  Nav,
+  NavItem,
+  NavDropdown,
+  MenuItem,
+  Form,
+  Button,
+  FormControl,
+} from "react-bootstrap";
+
+function Navigationbar() {
+  return (
+    <Navbar className="nav-bk" expand="lg">
+      {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
+      {/* when resizing page */}
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link
+            href="https://www.ufdreamteam.org/"
+            style={{ color: "white", fontSize:"16px"}} //{/* need to change font */}
           >
-            <li>
-              <a href="https://www.facebook.com/UFDreamTeam/">
-                <FontAwesomeIcon icon={faFacebookSquare} className="social" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/ufdreamteam/?hl=en">
-                <FontAwesomeIcon icon={faInstagram} className="social" />
-              </a>
-            </li>
-          </ul>
-          <Route path="/Mainpage" component={home} />
-        </nav>
-      </Router>
-    );
-  }
+            Not a Member? View the DTE website
+          </Nav.Link>
+        </Nav>
+
+        <a href="https://www.facebook.com/UFDreamTeam/">
+          <FontAwesomeIcon icon={faFacebookSquare} className="social" />
+        </a>
+        <a href="https://www.instagram.com/ufdreamteam/?hl=en">
+          <FontAwesomeIcon icon={faInstagram} className="social" />
+        </a>
+      </Navbar.Collapse>
+    </Navbar>
+  );
 }
-export default Navbar;
+
+export default Navigationbar;
