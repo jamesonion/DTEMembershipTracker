@@ -52,13 +52,12 @@
   align-items: center;
   height: inherit;
   padding: 20px;
-  
 }
 
 Form {
   width: 25%;
   padding: 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   background: white;
   box-shadow: 0 0 8px maroon;
 }
@@ -77,13 +76,8 @@ Form {
 }
  */
 
-
-.container {
-  width: 1000px;
-  min-height: 100%;
-}
-
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -96,3 +90,13 @@ img {
   max-width: 100%;
 }
 
+.btn-danger {
+  background-color: maroon !important;
+  border-color: maroon !important;
+  color: #fff !important;
+  height: 100% !important;
+  width: 100% !important;
+
+  position: relative !important;
+  display: inline-block !important;
+}

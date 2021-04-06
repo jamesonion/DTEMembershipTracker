@@ -1,35 +1,39 @@
 import React, { Component } from "react";
 import "../default.min.css";
 import transparentlogo from "../assets/img/logoTransparent2.png";
-import { Link, Route, BrowserRouter as Router } from "react-router-dom";
-import { Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Form, Button} from "react-bootstrap";
 
 function Signin() {
   return (
-    <div id="container">
-      <div className="testbox">
-        <Form>
-          <body>
-            <img src={transparentlogo} />
-          </body>
+    <div className="testbox">
+      
+      <Form>
+        <body>
+          <img src={transparentlogo} />
+        </body>
 
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: "maroon" }}>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
-          </Form.Group>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label style={{ color: "maroon" }}>Email</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+        </Form.Group>
 
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label style={{ color: "maroon" }}>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Remember me" />
-          </Form.Group>
-          <Button variant="primary" type="submit">
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label style={{ color: "maroon" }}>Password</Form.Label>
+          <Form.Control type="password" placeholder="Password" />
+        </Form.Group>
+        <Form.Group controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="Remember me" />
+        </Form.Group>
+        <div class="col-md-12 text-center">
+          <Button className="btn btn-danger" type="submit">
             Sign in
           </Button>
-        </Form>
-      </div>
+        </div>
+        <Link to="./register" onClick={() => window.location.href="/register"}>
+          Don't have an account? Sign Up
+        </Link>
+      </Form>
     </div>
 
     // <div
