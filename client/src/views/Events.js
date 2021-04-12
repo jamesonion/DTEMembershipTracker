@@ -5,6 +5,7 @@ const Events = () => {
   return (
     <div>
       <Usernavigationbar />
+      <p> EMBED THE EVENTS HERE </p>
     </div>
   );
 };

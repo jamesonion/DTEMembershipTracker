@@ -125,7 +125,8 @@ img {
   border-radius: 15;
 }
 
-/* Testing for User Navbar */
+/* Testing for User Navbar*/
+/* These are not being used atm */
 .userNavLinks {
   color: white;
   font-weight: bold;
@@ -139,6 +140,22 @@ img {
 }
 .userNavImage {
   object-fit: contain;
-  padding-top: 1rem;
-  max-height: 100px;
+  max-height: 80px;
+}
+
+/* Box for points page showcase*/
+/* Size is currently hard coded */
+.pointsForm {
+  background-color: #800000;
+  border: 0.2rem solid white;
+  height: 70vh;
+  width: 70vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pointsField {
+  color: white;
+  padding: 1rem;
+  margin-right: 10rem;
 }

@@ -9,8 +9,7 @@ import {
   Button,
   FormControl,
 } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import transparentlogo from "../../assets/img/logoTransparent2.png";
+import logoWhiteTransparent from "../../assets/img/logoWhiteTransparent.png";
 
 function Usernavigationbar() {
   return (
@@ -18,52 +17,60 @@ function Usernavigationbar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Link
+          <Nav.Link
             to="/Register"
             onClick={() => (window.location.href = "/Register")}
           >
-            <img
-              className="userNavImage"
-              src={transparentlogo}
-              className="userNavImage"
-            />
-          </Link>
-          <Link
+            <img className="userNavImage" src={logoWhiteTransparent} />
+          </Nav.Link>
+          <Nav.Link
             to="/Events"
-            className="userNavLinks"
             style={{
               color: "white",
+              fontSize: "1.75rem",
+              fontWeight: "bold",
+              padding: "1.5rem",
             }}
             onClick={() => (window.location.href = "/Events")}
           >
             Events
-          </Link>
-          <Link
+          </Nav.Link>
+          <Nav.Link
             to="/Points"
-            className="userNavLinks"
             style={{
               color: "white",
+              fontSize: "1.75rem",
+              fontWeight: "bold",
+              padding: "1.5rem",
             }}
             onClick={() => (window.location.href = "/Points")}
           >
             Points
-          </Link>
-          <Link
+          </Nav.Link>
+          <Nav.Link
             to="/Submit"
-            className="userNavLinks"
-            style={{ color: "white" }}
+            style={{
+              color: "white",
+              fontSize: "1.75rem",
+              fontWeight: "bold",
+              padding: "1.5rem",
+            }}
             onClick={() => (window.location.href = "/Submit")}
           >
             Submit
-          </Link>
-          <Link
+          </Nav.Link>
+          <Nav.Link
             to="/SignIn"
-            className="userNavLinks"
-            style={{ color: "white" }}
+            style={{
+              color: "white",
+              fontSize: "1.75rem",
+              fontWeight: "bold",
+              padding: "1.5rem",
+            }}
             onClick={() => (window.location.href = "/SignIn")}
           >
             Logout
-          </Link>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
