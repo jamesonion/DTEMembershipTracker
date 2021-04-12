@@ -2,7 +2,7 @@ import React from "react";
 import Usernavigationbar from "../components/Navbar/UserNavbar.js";
 import { ListGroup } from "react-bootstrap";
 
-const Points = () => {
+const Points = (props) => {
   return (
     <div>
       <Usernavigationbar />
@@ -29,10 +29,10 @@ const Points = () => {
         </h2>
 
         {/* Can use a similar approach to the forms by creating another div here and have the following left-align in a smaller inner div */}
-        <h3 className="pointsField"> Meeting Points: </h3>
-        <h3 className="pointsField"> Event Points: </h3>
-        <h3 className="pointsField"> Total Points: </h3>
-        <h3 className="pointsField"> Requirement Status : </h3>
+        <h3 className="pointsField"> Meeting Points: meetingPoints </h3>
+        <h3 className="pointsField"> Event Points: eventPoints </h3>
+        <h3 className="pointsField"> Total Points: totalPoints </h3>
+        <h3 className="pointsField"> Requirement Status : status </h3>
 
         {/* Experimenting with using a list group from bootstrap but likely not work */}
         {/*
@@ -42,6 +42,14 @@ const Points = () => {
       </div>
     </div>
   );
+};
+
+Points.defaultProps = {
+  meetingPoints: "0",
+  eventPoints: "0",
+  // cannot add meetingPoints + eventPoints because they are not intialized yet, find a way for the database to connect to these and change them
+  totalPoints: "0",
+  status: "incomplete",
 };
 
 export default Points;
