@@ -2,8 +2,14 @@ const path = require('path'),
     express = require('express'),
     mongoose = require('mongoose'),
     morgan = require('morgan'),
-    bodyParser = require('body-parser'),
-    exampleRouter = require('../routes/examples.server.routes');
+    bodyParser = require('body-parser')
+    usersRouter = require("../routes/users");
+    cors = require("cors")
+
+//require("dotenv").config();    
+
+var passport = require("passport");
+var session = require('express-session');
 
 module.exports.init = () => {
     /* 
@@ -16,6 +22,11 @@ module.exports.init = () => {
     mongoose.set('useCreateIndex', true);
     mongoose.set('useFindAndModify', false);
 
+    const connection = mongoose.connection;
+    connection.once('open', () => {
+        console.log("MongoDB database connection established successfully!");
+    })
+
     // initialize app
     const app = express();
 
@@ -25,8 +36,33 @@ module.exports.init = () => {
     // body parsing middleware
     app.use(bodyParser.json());
 
-    // add a router
-    app.use('/api/example', exampleRouter);
+    //configuring passport
+    require('./passport');
+
+    //Passport middleware
+    app.use(express.urlencoded({estended:true}));
+    app.use(express.json());
+    app.use(express.static("public"));
+    app.use(require('cookie-parser')());
+
+    app.use(session({
+      key: 'user_sid',
+      secret: 'session_secret',
+      resave: true,
+      saveUninitialized: false,
+      cookie: {
+        expires: 10800000, // 3 hrs
+        httpOnly: false
+      }
+    }));
+    
+    app.use(passport.initialize());
+    app.use(passport.session()); //persistent login sessions
+
+
+    // add routers
+    app.use(cors())
+    app.use('/users', usersRouter);
 
     if (process.env.NODE_ENV === 'production') {
         // Serve any static files
@@ -40,4 +76,3 @@ module.exports.init = () => {
 
     return app
 }
-
