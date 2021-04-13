@@ -29,10 +29,10 @@ const Points = (props) => {
         </h2>
 
         {/* Can use a similar approach to the forms by creating another div here and have the following left-align in a smaller inner div */}
-        <h3 className="pointsField"> Meeting Points: meetingPoints </h3>
-        <h3 className="pointsField"> Event Points: eventPoints </h3>
-        <h3 className="pointsField"> Total Points: totalPoints </h3>
-        <h3 className="pointsField"> Requirement Status : status </h3>
+        <h3 className="pointsField"> Meeting Points: {props.meetingPoints} </h3>
+        <h3 className="pointsField"> Event Points: {props.eventPoints} </h3>
+        <h3 className="pointsField"> Total Points: {props.totalPoints} </h3>
+        <h3 className="pointsField"> Requirement Status : {props.status} </h3>
 
         {/* Experimenting with using a list group from bootstrap but likely not work */}
         {/*
