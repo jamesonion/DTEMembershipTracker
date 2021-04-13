@@ -26,11 +26,13 @@ function Navigationbar() {
         <Nav className="mr-auto">
           <Nav.Link
             href="https://www.ufdreamteam.org/"
-            style={{ color: "white", fontSize: "16px" }} //{/* need to change font */}
+            style={{ color: "white", fontSize: "16px" }} 
           >
             <div>
-              <FontAwesomeIcon icon={faArrowLeft} /> <span> </span>
-              Not a Member? View the DTE website
+              <div className="navbarFont">
+                <FontAwesomeIcon icon={faArrowLeft} /> <span> </span>
+                Not a Member? View the DTE website
+              </div>
             </div>
           </Nav.Link>
         </Nav>

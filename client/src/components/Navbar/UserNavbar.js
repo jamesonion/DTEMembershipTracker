@@ -10,6 +10,7 @@ import {
   FormControl,
 } from "react-bootstrap";
 import logoWhiteTransparent from "../../assets/img/logoWhiteTransparent.png";
+import "../../default.min.css";
 
 function Usernavigationbar() {
   return (
@@ -17,59 +18,37 @@ function Usernavigationbar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link
-            to="/Register"
-            onClick={() => (window.location.href = "/Register")}
-          >
-            <img className="userNavImage" src={logoWhiteTransparent} />
-          </Nav.Link>
+          <Navbar.Brand href="/Register">
+            <img
+              src={logoWhiteTransparent}
+              className="userNavImage"
+              alt="dtelogo"
+            />
+          </Navbar.Brand>
+
           <Nav.Link
             to="/Events"
-            style={{
-              color: "white",
-              fontSize: "1.75rem",
-              fontWeight: "bold",
-              padding: "1.5rem",
-            }}
             onClick={() => (window.location.href = "/Events")}
           >
-            Events
+            <h3 className="navbarFont">Events</h3>
           </Nav.Link>
           <Nav.Link
             to="/Points"
-            style={{
-              color: "white",
-              fontSize: "1.75rem",
-              fontWeight: "bold",
-              padding: "1.5rem",
-            }}
             onClick={() => (window.location.href = "/Points")}
           >
-            Points
+            <h3 className="navbarFont">Points</h3>
           </Nav.Link>
           <Nav.Link
             to="/Submit"
-            style={{
-              color: "white",
-              fontSize: "1.75rem",
-              fontWeight: "bold",
-              padding: "1.5rem",
-            }}
             onClick={() => (window.location.href = "/Submit")}
           >
-            Submit
+            <h3 className="navbarFont">Submit</h3>
           </Nav.Link>
           <Nav.Link
             to="/SignIn"
-            style={{
-              color: "white",
-              fontSize: "1.75rem",
-              fontWeight: "bold",
-              padding: "1.5rem",
-            }}
             onClick={() => (window.location.href = "/SignIn")}
           >
-            Logout
+            <h3 className="navbarFont">Logout</h3>
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
