@@ -5,6 +5,7 @@ import "../default.min.css";
 const Points = (props) => {
   return (
     <div>
+      {/* Create function and run it here that dynamically updates the properties upon loading the points page */}
       <Usernavigationbar />
       <h1
         style={{
@@ -20,7 +21,7 @@ const Points = (props) => {
       </h1>
       {/* Create red box with white outline giving the user's name */}
       <div className="pointsForm">
-        <h2 className="navbarFont">YOUR NAME</h2>
+        <h2 className="navbarFont"> {props.name}</h2>
         {/* Can use a similar approach to the forms by creating another div here and have the following left-align in a smaller inner div */}
         <h3 className="navbarFont"> Meeting Points: {props.meetingPoints} </h3>
         <h3 className="navbarFont"> Event Points: {props.eventPoints} </h3>
@@ -34,10 +35,11 @@ const Points = (props) => {
 };
 
 Points.defaultProps = {
+  name: "John Doe",
   meetingPoints: "0",
   eventPoints: "0",
-  // cannot add meetingPoints + eventPoints because they are not intialized yet, find a way for the database to connect to these and change them
   totalPoints: "0",
+  // Incomplete if points are below 5
   status: "Incomplete",
 };
 

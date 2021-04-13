@@ -10,13 +10,15 @@ import {
   FormControl,
 } from "react-bootstrap";
 import logoWhiteTransparent from "../../assets/img/logoWhiteTransparent.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
 import "../../default.min.css";
 
 function Usernavigationbar() {
   return (
     <Navbar className="nav-bk" expand="lg">
       <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
-      <Navbar.Collapse id="basic-navbar-nav">
+      <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Navbar.Brand href="/Register">
             <img
@@ -32,6 +34,7 @@ function Usernavigationbar() {
           >
             <h3 className="navbarFont">Events</h3>
           </Nav.Link>
+
           <Nav.Link
             to="/Points"
             onClick={() => (window.location.href = "/Points")}
@@ -44,13 +47,16 @@ function Usernavigationbar() {
           >
             <h3 className="navbarFont">Submit</h3>
           </Nav.Link>
-          <Nav.Link
-            to="/SignIn"
-            onClick={() => (window.location.href = "/SignIn")}
-          >
-            <h3 className="navbarFont">Logout</h3>
-          </Nav.Link>
         </Nav>
+
+        <Nav.Link
+          to="/SignIn"
+          onClick={() => (window.location.href = "/SignIn")}
+        >
+          <h3 className="navbarFont">
+            Logout <FontAwesomeIcon icon={faSignOutAlt} />
+          </h3>{" "}
+        </Nav.Link>
       </Navbar.Collapse>
     </Navbar>
   );

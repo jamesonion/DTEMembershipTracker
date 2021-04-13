@@ -26,7 +26,7 @@ function Navigationbar() {
         <Nav className="mr-auto">
           <Nav.Link
             href="https://www.ufdreamteam.org/"
-            style={{ color: "white", fontSize: "16px" }} 
+            style={{ color: "white", fontSize: "16px" }}
           >
             <div>
               <div className="navbarFont">
