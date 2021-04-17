@@ -20,7 +20,7 @@ function Usernavigationbar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />{" "}
       <Navbar.Collapse className="justify-content-end" id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Navbar.Brand href="/Register">
+          <Navbar.Brand>
             <img
               src={logoWhiteTransparent}
               className="userNavImage"

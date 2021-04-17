@@ -64,6 +64,7 @@ export default class Register extends Component {
       .then(function (response) {
         console.log(response);
         alert("Account Created!");
+        window.location.href = "/SignIn";
       })
       .catch(function (error) {
         console.log(error);
@@ -123,7 +124,7 @@ export default class Register extends Component {
             </div>
             <Link
               to="/signin"
-              onClick={() => (window.location.href = "/signin")}
+              onClick={() => (window.location.href = "/SignIn")}
             >
               Already have an account? Log in.
             </Link>
