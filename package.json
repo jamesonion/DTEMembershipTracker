@@ -31,6 +31,8 @@
     "concurrently": "^4.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "google-spreadsheet": "^3.1.15",
+    "googleapis": "^39.2.0",
     "mocha": "^6.2.3",
     "mongoose": "^5.11.19",
     "morgan": "^1.10.0",

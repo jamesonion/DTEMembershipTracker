@@ -85,3 +85,7 @@ router.route('/update/:id').post((req, res) => {
 
   
   module.exports = router;
+
+  function getEmail () {
+    return "joseph.brody@ufl.edu"
+  }
