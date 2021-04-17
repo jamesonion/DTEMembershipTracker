@@ -60,14 +60,18 @@ export default class Signin extends Component {
       password: this.state.password
     };
 
-
     axios.post("http://localhost:5000/users/login", user)
      .then(response => {
-       console.log(response.data)
-       if(response.status == 200){
-          window.location = "/points";
+       console.log(response)
+       //console.log(response.status)
+       if(response.data.success){
+          window.location.href = "/Points";
+          this.setState({
+            redirectTo: '/Points'
+          })
+          console.log("success!");
        }else{
-        window.location = "/login";
+        window.location.href = "/SignIn";
        }
       })
      .catch((error) => {

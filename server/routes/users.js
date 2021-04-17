@@ -98,9 +98,17 @@ router.route('/update/:id').post((req, res) => {
   
 
 //Route: Sign in a user once they've input email and password
-router.route('/login').post(passport.authenticate('login', { successRedirect: '/points',
-                                                             failureRedirect: '/login',
-                                                             failureFlash: true })
-);
+router.route('/login').post(function(req, res, next){
+  passport.authenticate('local-login',function(err, user, info) {
+  if (err) { return next(err); }
+  // Redirect if it fails
+  if (!user) { 
+    return res.send({ success : false, message : 'signin failed' });}
+  req.logIn(user, function(err) {
+    if (err) { return next(err); }
+    // Redirect if it succeeds
+    return res.send({ success : true, message : 'signin succeeded' });
+  });
+})(req, res, next)});
   
   module.exports = router;

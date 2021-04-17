@@ -10,6 +10,7 @@ const path = require('path'),
 
 var passport = require("passport");
 var session = require('express-session');
+var flash = require('connect-flash');
 
 module.exports.init = () => {
     /* 
@@ -52,13 +53,14 @@ module.exports.init = () => {
       saveUninitialized: false,
       cookie: {
         expires: 10800000, // 3 hrs
-        httpOnly: false
+        httpOnly: true
       }
     }));
     
-    app.use(passport.initialize());
-    app.use(passport.session()); //persistent login sessions
+    app.use(passport.initialize()); //loads req.session.passport.user
+    app.use(passport.session()); //calls passport.deserializeUser() and req.user = {user object}
 
+    app.use(flash()); //for flashing messages
 
     // add routers
     app.use(cors())
