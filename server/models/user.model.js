@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 /* 
   This file contains the schema for the users database. Each schema has
   a variet of validators and regular expressions to ensure their values.
-
   Password Regex Requirements:
     - At least 8 characters long, max length anything
     - Include at least 1 lowercase letter
@@ -63,7 +63,7 @@ const userSchema = new mongoose.Schema({
         console.log(v)
         return /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*-.])[\w!@#$%^&*-.]{8,}$/.test(v);
       },
-      message: `Password does not meet minimum requirements!`                                          // TODO: bug fix-> need to unhash password before test or after fail because after failing once the hash can pass
+      message: `Password does not meet minimum requirements!`                                          
     },
   },
   points: {
@@ -77,11 +77,11 @@ const userSchema = new mongoose.Schema({
 });
 
 
-/* TODO -- need to decrypt password (do this in users.js)
+/* TODO -- need to decrypt password (do this in users.js)*/
 userSchema.methods.validPassword = function(password) {
   return bcrypt.compareSync(password, this.password);
 };
-*/
+
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;

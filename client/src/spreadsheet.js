@@ -1,6 +1,6 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 
-const creds = require('./config/credentials.json')
+const creds = require('./credentials.json')
 
 const doc = new GoogleSpreadsheet('1vPreqXORmA9kow-FFAz5KArkesoAD0qRjmoxyzL8A9Y');
 
@@ -26,7 +26,7 @@ async function getPointsByEmail(targetEmail) {
 
     const rows = await pointsSheet.getRows();
 
-    data = {
+    var data = {
         total_points: 0,
         event_points: 0,
         meeting_points: 0
@@ -49,13 +49,16 @@ async function getPointsByEmail(targetEmail) {
     return data;
 }
 
+module.exports.getPointsByEmail = getPointsByEmail;
+
 
 // Here is an example of how to call the above function:
 
-async function example() {
-    var testEmail = 'joseph.brody@ufl.edu'
-    const result = await getPointsByEmail(testEmail)
-    console.log(`${testEmail}:\n\tTotal Points: ${result.total_points}\n\tEvent Points: ${result.event_points}\n\tMeeting Points: ${result.meeting_points}`);
-}
+// async function example() {
+//     var testEmail = 'joseph.brody@ufl.edu'
+//     const result = await getPointsByEmail(testEmail)
+//     console.log(`${testEmail}:\n\tTotal Points: ${result.total_points}\n\tEvent Points: ${result.event_points}\n\tMeeting Points: ${result.meeting_points}`);
+// }
 
-example()
+// example()
+

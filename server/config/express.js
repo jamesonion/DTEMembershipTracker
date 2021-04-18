@@ -6,6 +6,12 @@ const path = require('path'),
     usersRouter = require("../routes/users");
     cors = require("cors")
 
+//require("dotenv").config();    
+
+var passport = require("passport");
+var session = require('express-session');
+var flash = require('connect-flash');
+
 module.exports.init = () => {
     /* 
         connect to database
@@ -31,6 +37,31 @@ module.exports.init = () => {
     // body parsing middleware
     app.use(bodyParser.json());
 
+    //configuring passport
+    require('./passport');
+
+    //Passport middleware
+    app.use(express.urlencoded({estended:true}));
+    app.use(express.json());
+    app.use(express.static("public"));
+    app.use(require('cookie-parser')());
+
+    app.use(session({
+      key: 'user_sid',
+      secret: 'session_secret',
+      resave: true,
+      saveUninitialized: false,
+      cookie: {
+        expires: 10800000, // 3 hrs
+        httpOnly: true
+      }
+    }));
+    
+    app.use(passport.initialize()); //loads req.session.passport.user
+    app.use(passport.session()); //calls passport.deserializeUser() and req.user = {user object}
+
+    app.use(flash()); //for flashing messages
+
     // add routers
     app.use(cors())
     app.use('/users', usersRouter);
@@ -47,4 +78,3 @@ module.exports.init = () => {
 
     return app
 }
-
