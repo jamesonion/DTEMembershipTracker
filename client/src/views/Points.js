@@ -8,12 +8,12 @@ export default class Points extends Component {
     super(props);
 
     this.state = {
-      email: "example@gmail.com",
-      name: "John Doe",
-      meetingPoints: "0",
-      eventPoints: "0",
-      totalPoints: "0",
-      status: "Incomplete",
+      email: "",
+      name: "",
+      meetingPoints: "",
+      eventPoints: "",
+      totalPoints: "",
+      status: "",
     };
   }
   // Create function or on component mount that sets the email of the user
@@ -21,7 +21,14 @@ export default class Points extends Component {
   componentDidMount() {
     this.setState({
       email: "john@gmail.com",
+      name: "John Doe",
+      meetingPoints: 0,
+      eventPoints: 0,
+      status: "Incomplete",
+      // Total points will not update dynamically through this set.state function if eventPoints and meetingPoints have not been defined during construction
+      totalPoints: this.state.meetingPoints + this.state.eventPoints,
     });
+
     console.log(this.state.email);
   }
 
