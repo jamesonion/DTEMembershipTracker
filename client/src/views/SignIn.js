@@ -66,9 +66,6 @@ export default class Signin extends Component {
        //console.log(response.status)
        if(response.data.success){
           window.location.href = "/Points";
-          this.setState({
-            redirectTo: '/Points'
-          })
           console.log("success!");
        }else{
         window.location.href = "/SignIn";
