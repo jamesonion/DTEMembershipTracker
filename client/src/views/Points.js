@@ -17,11 +17,13 @@ export default class Points extends Component {
     };
   }
   // Create function or on component mount that sets the email of the user
-  onChangeEmail = (e) => {
+
+  componentDidMount() {
     this.setState({
-      email: e,
+      email: "john@gmail.com",
     });
-  };
+    console.log(this.state.email);
+  }
 
   render() {
     return (
