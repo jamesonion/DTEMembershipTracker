@@ -2,8 +2,6 @@ const { GoogleSpreadsheet } = require('google-spreadsheet');
 //const creds = require('./credentials.json')
 const doc = new GoogleSpreadsheet('1vPreqXORmA9kow-FFAz5KArkesoAD0qRjmoxyzL8A9Y');
 
-
-
 /*
 
 This function accepts a string representing the target email.
@@ -47,8 +45,10 @@ async function getPointsByEmail(targetEmail) {
     return data;
 }
 
-module.exports = {getPointsByEmail};
+// module.exports.getPointsByEmail = getPointsByEmail;
 
+
+export default async function getPointsByEmail
 
 // Here is an example of how to call the above function:
 
