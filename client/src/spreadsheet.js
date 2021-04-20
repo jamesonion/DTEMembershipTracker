@@ -47,7 +47,7 @@ async function getPointsByEmail(targetEmail) {
     return data;
 }
 
-module.exports.getPointsByEmail = getPointsByEmail;
+module.exports = {getPointsByEmail};
 
 
 // Here is an example of how to call the above function:
