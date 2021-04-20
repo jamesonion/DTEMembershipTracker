@@ -60,7 +60,7 @@ export default class Register extends Component {
 
     // Post the request to the backend
     axios
-      .post("https://dte-membership-tracker-app.herokuapp.com/users/add", user) // TODO: When deploying need to make this the web address. Can set the address via environment variables.
+      .post("https://dte-membership-tracker-app/users/add", user) // TODO: When deploying need to make this the web address. Can set the address via environment variables.
       .then(function (response) {
         console.log(response);
         window.location.href = "/Signin";
