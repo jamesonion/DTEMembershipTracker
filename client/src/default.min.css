@@ -1,0 +1,169 @@
+.nav-bk {
+  background: #800000;
+  height: 2cm;
+}
+
+.bgLayout {
+  background-image: url("./assets/img/background.png");
+  background-size: 1920px 1080px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+.text-form {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
+  color: maroon;
+}
+.signIn {
+  width: 92%;
+  padding: 1.25rem;
+  text-align: center;
+  background-color: maroon;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.text-field {
+  width: 90%;
+  border-color: maroon;
+  border-width: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: #f7f7f7;
+  height: 2rem;
+}
+
+.social {
+  min-width: 3rem;
+  min-height: 2.2rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 40px;
+}
+
+.testbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  padding: 20px;
+}
+
+Form {
+  width: 25%;
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 0 8px maroon;
+}
+
+/* Work on getting only the backround to be blurred rather than the whole form */
+/* .blur {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+} */
+
+/* .banner {
+  position: relative;
+  padding-bottom: 4cm;
+
+
+  display: flex;
+  background-position: center;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+img {
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.btn-danger {
+  background-color: maroon !important;
+  border-color: maroon !important;
+  color: #fff !important;
+  height: 100% !important;
+  width: 100% !important;
+
+  position: relative !important;
+  display: inline-block !important;
+}
+
+.form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.formDiv {
+  background-color: #ffffff99;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 15;
+}
+
+/* Testing for User Navbar*/
+/* These are not being used atm */
+.userNavLinks {
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 2.5rem;
+  padding-top: 3rem;
+  /* text-decoration: none;
+  text-decoration-color: white;
+  text-align: center;
+  textalignvertical: "center"; */
+}
+.userNavImage {
+  object-fit: contain;
+  max-height: 80px;
+  padding-top: 1em;
+}
+
+/* Box for points page showcase*/
+/* Size is currently hard coded */
+.pointsForm {
+  background-color: #800000;
+  border: 0.2rem solid white;
+  height: 70vh;
+  width: 70vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pointsField {
+  color: white;
+  padding: 1rem;
+  margin-right: 10rem;
+}
+
+.navbarFont {
+  color: white;
+  font-weight: bold;
+  padding: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
