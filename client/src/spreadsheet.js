@@ -9,7 +9,7 @@ This function accepts a string representing the target email.
 Returns an objects with the following attributes: total_points, event_points, and meeting_points
 
 */
-async function getPointsByEmail(targetEmail) {
+export default async function getPointsByEmail(targetEmail) {
 
     await doc.useServiceAccountAuth({
         client_email: process.env.client_email,
@@ -47,8 +47,6 @@ async function getPointsByEmail(targetEmail) {
 
 // module.exports.getPointsByEmail = getPointsByEmail;
 
-
-export default async function getPointsByEmail
 
 // Here is an example of how to call the above function:
 
