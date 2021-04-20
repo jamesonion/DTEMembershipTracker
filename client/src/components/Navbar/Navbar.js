@@ -8,12 +8,6 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import {
   Navbar,
   Nav,
-  NavItem,
-  NavDropdown,
-  MenuItem,
-  Form,
-  Button,
-  FormControl,
 } from "react-bootstrap";
 
 function Navigationbar() {
@@ -25,7 +19,7 @@ function Navigationbar() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link
-            href="https://www.ufdreamteam.org/"
+            href="https://www.ufdreamteam.org/dream-team-engineering"
             style={{ color: "white", fontSize: "16px" }} //{/* need to change font */}
           >
             <div>
@@ -35,7 +29,7 @@ function Navigationbar() {
           </Nav.Link>
         </Nav>
 
-        <a href="https://www.facebook.com/UFDreamTeam/">
+        <a href="https://www.facebook.com/DreamTeamEngineering/">
           <FontAwesomeIcon icon={faFacebookSquare} className="social" />
         </a>
         <a href="https://www.instagram.com/ufdreamteam/?hl=en">

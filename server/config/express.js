@@ -53,7 +53,7 @@ module.exports.init = () => {
       saveUninitialized: false,
       cookie: {
         expires: 10800000, // 3 hrs
-        httpOnly: true
+        httpOnly: false
       }
     }));
     

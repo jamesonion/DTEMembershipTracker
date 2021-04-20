@@ -139,6 +139,7 @@ img {
 .userNavImage {
   object-fit: contain;
   max-height: 80px;
+  padding-top: 1em;
 }
 
 /* Box for points page showcase*/
@@ -156,4 +157,11 @@ img {
   color: white;
   padding: 1rem;
   margin-right: 10rem;
+}
+
+.navbarFont {
+  color: white;
+  font-weight: bold;
+  padding: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

@@ -63,7 +63,7 @@ export default class Register extends Component {
       .post("http://localhost:5000/users/add", user) // TODO: When deploying need to make this the web address. Can set the address via environment variables.
       .then(function (response) {
         console.log(response);
-        alert("Account Created!");
+        window.location.href = "/Signin";
       })
       .catch(function (error) {
         console.log(error);

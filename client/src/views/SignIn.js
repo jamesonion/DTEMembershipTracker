@@ -19,21 +19,6 @@ export default class Signin extends Component {
       users: [],
     };
   }
-  
-  /*componentDidMount() {
-    axios
-      .get("http://localhost:5000/users/")
-      .then((response) => {
-        if (response.data.length > 0) {
-          this.setState({
-            users: response.data,
-          });
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }*/
 
   onChangeEmail = (e) => {
     this.setState({
@@ -50,22 +35,18 @@ export default class Signin extends Component {
   onSubmit = (e) => {
     e.preventDefault();
 
-    /*const user = this.state.users.find(
-      (user) =>
-        this.state.email === user.email && this.state.password === user.password
-    );*/
-
     const user = {
       email: this.state.email,
       password: this.state.password
     };
 
+
     axios.post("http://localhost:5000/users/login", user)
      .then(response => {
        console.log(response)
-       //console.log(response.status)
        if(response.data.success){
           window.location.href = "/Points";
+          document.cookie = `email=${this.state.email}`;
           console.log("success!");
        }else{
         window.location.href = "/SignIn";
@@ -76,6 +57,7 @@ export default class Signin extends Component {
        alert(error);
      })
   };
+
 
   render() {
     return (
