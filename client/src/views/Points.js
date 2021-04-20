@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Usernavigationbar from "../components/Navbar/UserNavbar.js";
 import "../default.min.css";
-import {getPointsByEmail} from "../spreadsheet.js";
+import getPointsByEmail from "../spreadsheet.js";
 import './SignIn'
 // import SignIn from './SignIn'
 
