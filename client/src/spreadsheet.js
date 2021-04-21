@@ -14,6 +14,9 @@ export default async function getPointsByEmail(targetEmail) {
     alert("ENV: " + process.env.REACT_APP_DB_URI)
     alert("KEY: " + process.env.REACT_APP_private_key)
 
+    if(process.env.REACT_APP_private_key) {
+        alert("It exists")
+    }
    
     await doc.useServiceAccountAuth({
         client_email: process.env.REACT_APP_client_email,
