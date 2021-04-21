@@ -15,9 +15,10 @@ export default async function getPointsByEmail(targetEmail) {
 
     await doc.useServiceAccountAuth({
         client_email: process.env.client_email,
-        private_key: process.env.private_key.replace(/\\n/g, '\n'),
+        private_key: process.env.private_key.replace(/\\n/g, '\n')
     });
 
+    console.log("Finished awaiting");
 
     
     await doc.loadInfo(); 

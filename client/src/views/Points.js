@@ -38,6 +38,9 @@ export default class Points extends Component {
       alert(err);
     }
 
+    // James working 
+    console.log("result ");
+    console.log(result);
 
     this.setState({
       email: targetEmail, 
