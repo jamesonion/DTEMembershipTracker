@@ -24,27 +24,11 @@ export default async function getPointsByEmail(targetEmail) {
         // private_key: process.env.REACT_APP_private_key.replace("\\\\n", "\n")
     });
 
-    try {
-        await doc.loadInfo(); 
-    } catch(error) {
-        alert("await doc.loadInfo()")
-        alert(error)
-    }
+    await doc.loadInfo(); 
 
-    try {
-        const pointsSheet = doc.sheetsByIndex[0];
-    } catch(err) {
-        alert("const pointsSheet = doc.sheetsByIndex[0]")
-        alert(err)
-    }
-
-    try {
-        const rows = await pointsSheet.getRows();
-    }
-    catch(err) {
-        alert("const rows = await pointsSheet.getRows();")
-        alert(err)
-    }
+    const pointsSheet = doc.sheetsByIndex[0];
+    
+    const rows = await pointsSheet.getRows();
 
     var data = {
         total_points: 0,
