@@ -20,7 +20,8 @@ export default async function getPointsByEmail(targetEmail) {
    
     await doc.useServiceAccountAuth({
         client_email: process.env.REACT_APP_client_email,
-        private_key: process.env.REACT_APP_private_key.replace("\\\\n", "\n")
+        private_key: process.env.REACT_APP_private_key
+        // private_key: process.env.REACT_APP_private_key.replace("\\\\n", "\n")
     });
 
     
