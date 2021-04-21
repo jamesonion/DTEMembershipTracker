@@ -33,13 +33,14 @@ export default class Points extends Component {
     console.log("Cookie: " + targetEmail);
 
     var result;
-console.log("result:" + result);
-    // try {
-    //   result = await getPointsByEmail(targetEmail)
-    // } catch (err) {
-    //   alert(err);
-    // }
 
+    try {
+      result = await getPointsByEmail(targetEmail)
+    } catch (err) {
+      alert(err);
+    }
+
+     console.log("result:" + result);
     this.setState({
       email: targetEmail, 
       name: targetEmail,
