@@ -34,6 +34,8 @@ export default class Points extends Component {
 
     const result = await getPointsByEmail(targetEmail)
 
+    // James working 
+    console.log(result);
 
     this.setState({
       email: targetEmail, 
