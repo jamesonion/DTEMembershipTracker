@@ -35,12 +35,14 @@ export default class Points extends Component {
     var result;
 
     try {
-      result = await getPointsByEmail(targetEmail)
+      console.log("here");
+      result = await getPointsByEmail(targetEmail);
+      console.log("leaving");
     } catch (err) {
-      alert(err);
+      console.log(err);
     }
 
-     console.log("result:" + result);
+    console.log("result:" + result);
     this.setState({
       email: targetEmail, 
       name: targetEmail,

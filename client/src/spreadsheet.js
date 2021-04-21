@@ -10,7 +10,7 @@ Returns an objects with the following attributes: total_points, event_points, an
 
 */
 export default async function getPointsByEmail(targetEmail) {
-
+    console.log("in getpointbyemail and doc is " + doc);
     // alert("ENV: " + process.env.REACT_APP_DB_URI)
     // alert("KEY: " + process.env.REACT_APP_private_key)
 
@@ -18,18 +18,26 @@ export default async function getPointsByEmail(targetEmail) {
         // alert("It exists")
     // }
    
+    try{
     await doc.useServiceAccountAuth({
         client_email: process.env.REACT_APP_client_email,
         private_key: process.env.REACT_APP_private_key
         // private_key: process.env.REACT_APP_private_key.replace("\\\\n", "\n")
-    });
+    });}
+    catch(err){
+        console.log(err);
+    }
 
+    try{
     await doc.loadInfo(); 
+    }catch(err){
+        console.log(err);
+    }
 
     const pointsSheet = doc.sheetsByIndex[0];
-    
+    console.log("points sheet: " + pointsSheet);
     const rows = await pointsSheet.getRows();
-
+    console.log("rows: "+ rows);
     var data = {
         total_points: 0,
         event_points: 0,
