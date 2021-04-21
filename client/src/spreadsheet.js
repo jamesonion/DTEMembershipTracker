@@ -24,12 +24,27 @@ export default async function getPointsByEmail(targetEmail) {
         // private_key: process.env.REACT_APP_private_key.replace("\\\\n", "\n")
     });
 
-    
-    await doc.loadInfo(); 
+    try {
+        await doc.loadInfo(); 
+    } catch(error) {
+        alert("await doc.loadInfo()")
+        alert(error)
+    }
 
-    const pointsSheet = doc.sheetsByIndex[0];
+    try {
+        const pointsSheet = doc.sheetsByIndex[0];
+    } catch(err) {
+        alert("const pointsSheet = doc.sheetsByIndex[0]")
+        alert(err)
+    }
 
-    const rows = await pointsSheet.getRows();
+    try {
+        const rows = await pointsSheet.getRows();
+    }
+    catch(err) {
+        alert("const rows = await pointsSheet.getRows();")
+        alert(err)
+    }
 
     var data = {
         total_points: 0,
@@ -37,6 +52,7 @@ export default async function getPointsByEmail(targetEmail) {
         meeting_points: 0
     };
 
+    alert("Beginning for each row")
     rows.forEach(row => {
 
         if(row.EMAIL != undefined && row.EMAIL.toLowerCase() == targetEmail.toLowerCase()) {
