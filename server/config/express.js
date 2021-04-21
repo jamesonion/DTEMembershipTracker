@@ -66,6 +66,9 @@ module.exports.init = () => {
     app.use(cors())
     app.use('/users', usersRouter);
 
+    console.log("ENV: " + process.env.NODE_ENV)
+    console.log("KEY: " + process.env.private_key)
+
     if (process.env.NODE_ENV === 'production') {
         // Serve any static files
         app.use(express.static(path.join(__dirname, '../../client/build')));
