@@ -9,15 +9,23 @@ import './SignIn'
 export default class Points extends Component {
   constructor(props) {
     super(props);
-
+ //TEST CHANGE
     this.state = {
-      email: "",
-      name: "",
-      meetingPoints: "",
-      eventPoints: "",
-      totalPoints: "",
-      status: "",
+      email: props.email,
+      name: props.name,
+      meetingPoints: 0,
+      eventPoints: 0,
+      totalPoints: 0,
+      status: "Incomplete",
     };
+    // this.state = {
+    //   email: "",
+    //   name: "",
+    //   meetingPoints: "",
+    //   eventPoints: "",
+    //   totalPoints: "",
+    //   status: "",
+    // };
 
   }
   // Create function or on component mount that sets the email of the user

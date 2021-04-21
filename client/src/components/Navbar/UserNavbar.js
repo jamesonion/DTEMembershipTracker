@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import {
   Navbar,
   Nav,
-  NavItem,
-  NavDropdown,
-  MenuItem,
-  Form,
-  Button,
-  FormControl,
 } from "react-bootstrap";
 import logoWhiteTransparent from "../../assets/img/logoWhiteTransparent.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
