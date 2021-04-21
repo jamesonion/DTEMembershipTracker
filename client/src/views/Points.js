@@ -39,7 +39,8 @@ export default class Points extends Component {
       result = await getPointsByEmail(targetEmail);
       console.log("leaving");
     } catch (err) {
-      console.log(err);
+      // console.log(err);
+      alert(err);
     }
 
     console.log("result:" + result);
