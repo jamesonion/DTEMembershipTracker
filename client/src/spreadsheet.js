@@ -24,11 +24,10 @@ export default async function getPointsByEmail(targetEmail) {
         // private_key: process.env.REACT_APP_private_key.replace("\\\\n", "\n")
     });
 
-    
     await doc.loadInfo(); 
 
     const pointsSheet = doc.sheetsByIndex[0];
-
+    
     const rows = await pointsSheet.getRows();
 
     var data = {
@@ -37,6 +36,7 @@ export default async function getPointsByEmail(targetEmail) {
         meeting_points: 0
     };
 
+    alert("Beginning for each row")
     rows.forEach(row => {
 
         if(row.EMAIL != undefined && row.EMAIL.toLowerCase() == targetEmail.toLowerCase()) {
