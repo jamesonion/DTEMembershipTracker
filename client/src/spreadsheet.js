@@ -1,5 +1,4 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
-const creds = process.env.GOOGLE_CREDENTIALS
 const doc = new GoogleSpreadsheet('1vPreqXORmA9kow-FFAz5KArkesoAD0qRjmoxyzL8A9Y');
 
 /*
@@ -11,6 +10,7 @@ Returns an objects with the following attributes: total_points, event_points, an
 */
 export default async function getPointsByEmail(targetEmail) {
 
+    const creds = process.env.GOOGLE_CREDENTIALS
     alert(creds)
     console.log(creds)
 
