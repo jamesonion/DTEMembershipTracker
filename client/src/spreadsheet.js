@@ -1,5 +1,6 @@
 const { GoogleSpreadsheet } = require('google-spreadsheet');
 const doc = new GoogleSpreadsheet('1vPreqXORmA9kow-FFAz5KArkesoAD0qRjmoxyzL8A9Y');
+const creds = require('../../google-credentials.json')
 
 /*
 
@@ -10,10 +11,7 @@ Returns an objects with the following attributes: total_points, event_points, an
 */
 export default async function getPointsByEmail(targetEmail) {
 
-    const creds = process.env.GOOGLE_CREDENTIALS
-    alert(creds)
-    console.log(creds)
-
+   
     await doc.useServiceAccountAuth({
         client_email: creds.client_email,
         private_key: creds.env.private_key
