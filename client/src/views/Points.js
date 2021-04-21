@@ -34,11 +34,11 @@ export default class Points extends Component {
 
     var result;
 
-    try {
-      result = await getPointsByEmail(targetEmail)
-    } catch (err) {
-      alert(err);
-    }
+    // try {
+    //   result = await getPointsByEmail(targetEmail)
+    // } catch (err) {
+    //   alert(err);
+    // }
 
     this.setState({
       email: targetEmail, 
