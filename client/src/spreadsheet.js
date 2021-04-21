@@ -11,6 +11,8 @@ Returns an objects with the following attributes: total_points, event_points, an
 */
 export default async function getPointsByEmail(targetEmail) {
 
+
+    alert("Client_email: " + process.env.client_email)
    
     await doc.useServiceAccountAuth({
         client_email: process.env.client_email,
