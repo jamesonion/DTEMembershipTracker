@@ -16,7 +16,7 @@ export default class Points extends Component {
       meetingPoints: 0,
       eventPoints: 0,
       totalPoints: 0,
-      status: "Incomplete",
+      status: "Incccccomplete",
     };
     // this.state = {
     //   email: "",
