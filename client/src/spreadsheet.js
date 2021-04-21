@@ -1,6 +1,7 @@
 
 
 const { GoogleSpreadsheet } = require('google-spreadsheet');
+const creds = require('./google-credentials.json')
 //const creds = require(process.env.GOOGLE_APPLICATION_CREDENTIALS)
 const doc = new GoogleSpreadsheet('1vPreqXORmA9kow-FFAz5KArkesoAD0qRjmoxyzL8A9Y');
 
