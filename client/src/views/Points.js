@@ -28,7 +28,7 @@ export default class Points extends Component {
 
     // console.log(props.targetEmail)
 
-    const targetEmail = document.cookie.substr(6);
+    const targetEmail = document.cookie.substr(document.cookie.indexOf('email=') + 6);;
 
     console.log("Cookie: " + targetEmail);
 
