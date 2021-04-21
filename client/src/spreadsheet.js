@@ -16,8 +16,8 @@ export default async function getPointsByEmail(targetEmail) {
         private_key: process.env.private_key,
     });
 
-    console.log(client_email)
-    console.log(private_key)
+    console.log(process.env.client_email)
+    console.log(process.env.private_key)
     
     await doc.loadInfo(); 
 
