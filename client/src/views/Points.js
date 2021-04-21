@@ -9,15 +9,7 @@ import './SignIn'
 export default class Points extends Component {
   constructor(props) {
     super(props);
- //TEST CHANGE
-    // this.state = {
-    //   email: props.email,
-    //   name: props.name,
-    //   meetingPoints: 0,
-    //   eventPoints: 0,
-    //   totalPoints: 0,
-    //   status: "Incccccomplete",
-    // };
+
     this.state = {
       email: "",
       name: "",
@@ -41,7 +33,7 @@ export default class Points extends Component {
     console.log("Cookie: " + targetEmail);
 
     var result;
-
+console.log("result:" + result);
     // try {
     //   result = await getPointsByEmail(targetEmail)
     // } catch (err) {
@@ -59,7 +51,7 @@ export default class Points extends Component {
       totalPoints: result.total_points,
     });
   }
-
+·
   render() {
     return (
       <>
