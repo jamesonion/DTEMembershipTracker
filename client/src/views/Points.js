@@ -43,8 +43,10 @@ export default class Points extends Component {
     this.setState({
       email: targetEmail, 
       name: targetEmail,
-      meetingPoints: result.meeting_points,
-      eventPoints: result.event_points,
+      meetingPoints: (result.meeting_points == "undefined" ? 0 : result.meeting_points),
+      eventPoints: (result.event_points == "undefined" ? 0 : result.meeting_points),
+      // meetingPoints: result.meeting_points,
+      // eventPoints: result.event_points,
       status: (parseInt(result.total_points) >= 5 ? "Complete" : "Incomplete"),
       totalPoints: result.total_points,
     });
