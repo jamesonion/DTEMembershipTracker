@@ -10,9 +10,9 @@ Returns an objects with the following attributes: total_points, event_points, an
 
 */
 export default async function getPointsByEmail(targetEmail) {
-    console.log("in getpointbyemail and doc is " + targetEmail);
-    // alert("ENV: " + process.env.REACT_APP_DB_URI)
-    // alert("KEY: " + process.env.REACT_APP_private_key)
+    // console.log("in getpointbyemail and doc is " + targetEmail);
+    alert("ENV: " + process.env.REACT_APP_DB_URI)
+    alert("KEY: " + process.env.REACT_APP_PRIVATE_KEY)
 
     // if(process.env.REACT_APP_private_key) {
         // alert("It exists")
@@ -33,7 +33,7 @@ export default async function getPointsByEmail(targetEmail) {
     // }
 
     // try{
-        await doc.loadInfo(); 
+    await doc.loadInfo(); 
         // }
     // catch(err){
     //         console.log("that error");
