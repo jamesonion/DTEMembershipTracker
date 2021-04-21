@@ -51,7 +51,7 @@ console.log("result:" + result);
       totalPoints: result.total_points,
     });
   }
-·
+
   render() {
     return (
       <>
