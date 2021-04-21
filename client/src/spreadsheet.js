@@ -18,13 +18,27 @@ export default async function getPointsByEmail(targetEmail) {
         // alert("It exists")
     // }
    
-    await doc.useServiceAccountAuth({
-        client_email: process.env.REACT_APP_client_email,
-        private_key: process.env.REACT_APP_private_key
-        // private_key: process.env.REACT_APP_private_key.replace("\\\\n", "\n")
-    });
+    // try{
+        await doc.useServiceAccountAuth({
+            // client_email: process.env.REACT_APP_client_email,
+            client_email : process.env.REACT_APP_CLIENT_EMAIL,
+            // private_key: process.env.REACT_APP_private_key
+            private_key: process.env.REACT_APP_PRIVATE_KEY.replace("\\\\n", "\n")
+        });
+    // }
+    //     catch(err){
+    //         console.log("this error");
+    //         console.log(err);
+    //     }
+    // }
 
-    await doc.loadInfo(); 
+    // try{
+        await doc.loadInfo(); 
+        // }
+    // catch(err){
+    //         console.log("that error");
+    //         console.log(err);
+    //     }
 
     const pointsSheet = doc.sheetsByIndex[0];
     // console.log("points sheet: " + pointsSheet);
