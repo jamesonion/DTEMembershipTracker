@@ -40,17 +40,12 @@ export default class Points extends Component {
       alert(err);
     }
 
-    // James working 
-    console.log("result ");
-    console.log(result);
-
     this.setState({
       email: targetEmail, 
       name: targetEmail,
       meetingPoints: result.meeting_points,
       eventPoints: result.event_points,
       status: (parseInt(result.total_points) >= 5 ? "Complete" : "Incomplete"),
-      // Total points will not update dynamically through this set.state function if eventPoints and meetingPoints have not been defined during construction
       totalPoints: result.total_points,
     });
   }
