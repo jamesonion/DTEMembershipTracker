@@ -60,7 +60,7 @@ export default class Register extends Component {
 
     // Post the request to the backend
     axios
-      .post(__dirname + "/users/add", user) // TODO: When deploying need to make this the web address. Can set the address via environment variables.
+      .post("http://localhost:5000/users/add", user) // TODO: When deploying need to make this the web address. Can set the address via environment variables.
       .then(function (response) {
         console.log(response);
         window.location.href = "/Signin";
