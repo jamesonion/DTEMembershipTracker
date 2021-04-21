@@ -16,8 +16,8 @@ export default async function getPointsByEmail(targetEmail) {
     
 
     await doc.useServiceAccountAuth({
-        client_email: creds.client_email,
-        private_key: creds.private_key
+        client_email: process.env.client_email,
+        private_key: process.env.private_key
     });
 
     
