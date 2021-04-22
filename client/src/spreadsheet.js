@@ -11,8 +11,8 @@ Returns an objects with the following attributes: total_points, event_points, an
 */
 export default async function getPointsByEmail(targetEmail) {
     // console.log("in getpointbyemail and doc is " + targetEmail);
-    alert("ENV: " + process.env.REACT_APP_DB_URI)
-    alert("KEY: " + process.env.REACT_APP_PRIVATE_KEY)
+    // alert("ENV: " + process.env.REACT_APP_DB_URI)
+    // alert("KEY: " + process.env.REACT_APP_PRIVATE_KEY)
 
     // if(process.env.REACT_APP_private_key) {
         // alert("It exists")
@@ -42,9 +42,9 @@ export default async function getPointsByEmail(targetEmail) {
     //     }
 
     const pointsSheet = doc.sheetsByIndex[0];
-    console.log("points sheet: " + pointsSheet);
+   // console.log("points sheet: " + pointsSheet);
     const rows = await pointsSheet.getRows();
-    console.log("rows: "+ rows);
+    //console.log("rows: "+ rows);
 
     var data = {
         total_points: 0,
