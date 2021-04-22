@@ -1,7 +1,7 @@
 Dream Team Engineering (DTE) is a student organization that is dedicated to creating novel technologies to enhance the lives of the children at UF Health Shands.  We created an internal tool for DTE to help facilitate their operations. DTE members are able to create an account and view a calendar of events, view their points and status in the organization, as well as complete embedded google forms within the application for point opportunities and event sign-in.
 
 
-## Testing the Application
+## Testing the Application ##
 Ensure that cookies are enabled.
 
 Create an account using an email present within the google form below. Accounts can be created that are not on the google sheet, but they will not have any point information. Your password must contain at least 8 characters, mixed case, a number, and a special character. Alternatively, you can skip registration and use the following login to test the application:
